@@ -1,2 +1,3 @@
 # Projects
-This is my projects, with Runnable JARs.
+This is my projects.
+#### Languages [C, C#, C++, Java, MySQL]
