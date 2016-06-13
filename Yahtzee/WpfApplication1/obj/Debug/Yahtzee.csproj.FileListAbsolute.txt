@@ -1,0 +1,50 @@
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.exe.config
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.exe.manifest
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.application
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.exe
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.pdb
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.dll
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.Platform.Core.dll
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.xml
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.Platform.Core.xml
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.g.cs
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\App.g.cs
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee_MarkupCompile.cache
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee_MarkupCompile.lref
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.g.resources
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.Properties.Resources.resources
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.csproj.GenerateResource.Cache
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.exe.manifest
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.application
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.exe
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.pdb
+C:\Users\Petya\Documents\Visual Studio 2015\Projects\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.csprojResolveAssemblyReference.cache
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.exe.config
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.exe.manifest
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.application
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.exe
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Yahtzee.pdb
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.dll
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.Platform.Core.dll
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.xml
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\bin\Debug\Caliburn.Micro.Platform.Core.xml
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.csprojResolveAssemblyReference.cache
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.g.cs
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\App.g.cs
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee_MarkupCompile.cache
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee_MarkupCompile.lref
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.g.resources
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.Properties.Resources.resources
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.csproj.GenerateResource.Cache
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.exe.manifest
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.application
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.exe
+C:\Users\Petya\Desktop\WpfApplication1\WpfApplication1\obj\Debug\Yahtzee.pdb

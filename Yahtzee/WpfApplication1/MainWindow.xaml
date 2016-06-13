@@ -1,0 +1,667 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        Icon="./Resources/yahtzee.ico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="Yahtzee" Height="466" Width="1088" MinWidth="680" MinHeight="435" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,0,0" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <FlowDocumentScrollViewer VerticalScrollBarVisibility="Auto" RenderTransformOrigin="1,0.5" BorderThickness="0">
+                <FlowDocumentScrollViewer.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </FlowDocumentScrollViewer.RenderTransform>
+                <FlowDocument>
+                    <Paragraph FontWeight="Bold" FontStyle="Italic" FontSize="16" TextAlignment="Center">
+                        <Run Text="Computer"/>
+                    </Paragraph>
+                    <Table>
+                        <TableRowGroup Block.TextAlignment="Center">
+                            <TableRow FontWeight="Bold">
+                                <TableCell>
+                                    <Paragraph>
+                                        <Run Text="Section"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>
+                                        <Run Text="Score"/>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20" TextAlignment="Center">
+                                        <Run Block.TextAlignment="Center" Text="⚀"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBox1" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox1_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_one_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20" TextAlignment="Center">
+                                        <Run Block.TextAlignment="Center" Text="⚁"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBox2" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox2_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_two_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20" TextAlignment="Center">
+                                        <Run Block.TextAlignment="Center" Text="⚂"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBox3" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox3_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_three_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20" TextAlignment="Center">
+                                        <Run Block.TextAlignment="Center" Text="⚃"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBox4" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox4_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_four_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20" TextAlignment="Center">
+                                        <Run Block.TextAlignment="Center" Text="⚄"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBox5" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox5_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_five_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20" TextAlignment="Center">
+                                        <Run Block.TextAlignment="Center" Text="⚅"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBox6" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox6_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_six_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="SUM"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_sum_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="BONUS"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_bonus_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="Three of a Kind"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBoxThreeOfAKind" Cursor="Hand" Visibility="Hidden" Click="scoreBoxThreeOfAKind_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_three_of_a_kind_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="Four of a Kind"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBoxFourOfAKind" Cursor="Hand" Visibility="Hidden" Click="scoreBoxFourOfAKind_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_four_of_a_kind_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="Full House"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBoxFullHouse" Cursor="Hand" Visibility="Hidden" Click="scoreBoxFullHouse_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_full_house_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="Small Streight"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBoxSmallStreight" Cursor="Hand" Visibility="Hidden" Click="scoreBoxSmallStreight_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_small_straight_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="Large Streight"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBoxLargeStreight" Cursor="Hand" Visibility="Hidden" Click="scoreBoxLargeStreight_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_large_straight_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run Text=""/>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="Chance"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBoxChance" Cursor="Hand" Visibility="Hidden" Click="scoreBoxChance_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_chance_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="Yahtzee!"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <Run Text=""/>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <RadioButton x:Name="computerScoreBoxYahtzee" Cursor="Hand" Visibility="Hidden" Click="scoreBoxYahtzee_Click" />
+                                        </InlineUIContainer>
+                                        <Run Text=" "/>
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_yahtzee_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14" TextAlignment="Center">
+                                        <Run Text="TOTAL SCORE"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <InlineUIContainer>
+                                            <TextBlock  x:Name = "computer_total_scoreText"/>
+                                        </InlineUIContainer>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </FlowDocument>
+            </FlowDocumentScrollViewer>
+        </Grid>
+
+
+        <Grid Grid.Column="2" Margin="0,0,0,0">
+            <FlowDocumentScrollViewer VerticalScrollBarVisibility="Auto" RenderTransformOrigin="1,0.5" BorderThickness="0">
+                <FlowDocumentScrollViewer.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </FlowDocumentScrollViewer.RenderTransform>
+                <FlowDocument>
+                    <Paragraph FontWeight="Bold" FontStyle="Italic" FontSize="16" TextAlignment="Center">
+                        <Run x:Name ="playerName" Text=""/>
+                    </Paragraph>
+                    <Table>
+                        <TableRowGroup Block.TextAlignment="Left">
+                            <TableRow FontWeight="Bold">
+                                <TableCell>
+                                    <Paragraph>
+                                        <Run Text="Section"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>
+                                        <Run Text="Score"/>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell >
+                                    <Paragraph FontSize="20" TextAlignment="Center">
+                                        <Run Text="⚀" Block.TextAlignment="Center"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell >
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBox1" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox1_Click" />
+                                        <TextBlock  x:Name = "one_scoreText"/>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20"  TextAlignment="Center">
+                                        <Run Text="⚁" Block.TextAlignment="Center"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBox2" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox2_Click" />
+                                        <TextBlock  x:Name = "two_scoreText"/>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20"  TextAlignment="Center">
+                                        <Run Text="⚂" Block.TextAlignment="Center"/>
+
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBox3" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox3_Click" Margin="0" />
+                                        <TextBlock  x:Name = "three_scoreText" />
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20"  TextAlignment="Center">
+                                        <Run Text="⚃" Block.TextAlignment="Center"/>
+
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBox4" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox4_Click" />
+                                        <TextBlock  x:Name = "four_scoreText"/>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20"  TextAlignment="Center">
+                                        <Run Text="⚄" Block.TextAlignment="Center"/>
+
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBox5" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox5_Click" />
+                                        <TextBlock  x:Name = "five_scoreText"/>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="20"  TextAlignment="Center">
+                                        <Run Text="⚅" Block.TextAlignment="Center"/>
+
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBox6" Cursor="Hand" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Click="scoreBox6_Click" />
+                                        <TextBlock  x:Name = "six_scoreText"/>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14"  TextAlignment="Center">
+                                        SUM
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <TextBlock  x:Name = "sum_scoreText"/>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14"  TextAlignment="Center">
+                                        BONUS
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <TextBlock  x:Name = "bonus_scoreText"/>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14"  TextAlignment="Center">
+                                        Three of a Kind
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBoxThreeOfAKind" Cursor="Hand" Visibility="Hidden" Click="scoreBoxThreeOfAKind_Click" />
+                                        <TextBlock  x:Name = "three_of_a_kind_scoreText"/>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14"  TextAlignment="Center">
+                                        Four of a Kind
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBoxFourOfAKind" Cursor="Hand" Visibility="Hidden" Click="scoreBoxFourOfAKind_Click" />
+                                        <TextBlock  x:Name = "four_of_a_kind_scoreText"/>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14"  TextAlignment="Center">
+                                        Full House
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBoxFullHouse" Cursor="Hand" Visibility="Hidden" Click="scoreBoxFullHouse_Click" />
+                                        <TextBlock  x:Name = "full_house_scoreText"/>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14"  TextAlignment="Center">
+                                        Small Streight
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBoxSmallStreight" Cursor="Hand" Visibility="Hidden" Click="scoreBoxSmallStreight_Click" />
+                                        <TextBlock  x:Name = "small_straight_scoreText"/>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14"  TextAlignment="Center">
+                                        Large Streight
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBoxLargeStreight" Cursor="Hand" Visibility="Hidden" Click="scoreBoxLargeStreight_Click" />
+                                        <TextBlock  x:Name = "large_straight_scoreText"/>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>
+                                        Chance
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBoxChance" Cursor="Hand" Visibility="Hidden" Click="scoreBoxChance_Click" />
+                                        <TextBlock  x:Name = "chance_scoreText"/>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14"  TextAlignment="Center">
+                                        Yahtzee!
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <RadioButton x:Name="scoreBoxYahtzee" Cursor="Hand" Visibility="Hidden" Click="scoreBoxYahtzee_Click" />
+                                        <TextBlock  x:Name = "yahtzee_scoreText" />
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontSize="14"  TextAlignment="Center">
+                                        TOTAL SCORE
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph TextAlignment="Center">
+                                        <TextBlock  x:Name = "total_scoreText"/>
+                                    </Paragraph>
+                                    <Paragraph/>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </FlowDocument>
+            </FlowDocumentScrollViewer>
+        </Grid>
+
+
+        <Image x:Name="slot" Source="Resources/unrolled_slot.png" Stretch="Fill" Grid.Column="1"/>
+
+
+        <Rectangle x:Name="btnRoll" HorizontalAlignment="Left" Height="34" Margin="552,64,0,0" Stroke="Black" VerticalAlignment="Top" Width="33" RadiusY="49.5" RadiusX="49.5" StrokeThickness="0"  Cursor="Hand" MouseUp="btnRoll_MouseUp" Stretch="Fill" Grid.Column="1" Visibility="Hidden">
+            <Rectangle.Fill>
+                <RadialGradientBrush Opacity="0.6">
+                    <GradientStop Color="#FFBDBDBD" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Canvas HorizontalAlignment="Stretch" Margin="145,189,535,85" VerticalAlignment="Stretch" Grid.Column="1" >
+            <Rectangle x:Name="dice1"   HorizontalAlignment="Stretch" Height="50" RadiusY="7.667" RadiusX="7.667" Stroke="Black" StrokeThickness="0" VerticalAlignment="Stretch" Width="50" Canvas.Left="3" RenderTransformOrigin="1.35,0.53" Canvas.Top="38" MouseUp="dice1_MouseUp" Cursor="Hand" Visibility="Hidden">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/dice0.png" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="dice2" HorizontalAlignment="Stretch" Height="50" RadiusY="7.667" RadiusX="7.667" Stroke="Black" StrokeThickness="0" VerticalAlignment="Stretch" Width="50" RenderTransformOrigin="0.59,-0.735" Canvas.Left="74" Canvas.Top="38" MouseUp="dice2_MouseUp"  Cursor="Hand" Visibility="Hidden">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/dice0.png" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="dice3" HorizontalAlignment="Stretch" Height="50" RadiusY="7.667" RadiusX="7.667" Stroke="Black" StrokeThickness="0" VerticalAlignment="Stretch" Width="50" RenderTransformOrigin="-1.073,-0.98" Canvas.Left="146" Canvas.Top="38" MouseUp="dice3_MouseUp" Cursor="Hand" Visibility="Hidden">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/dice0.png" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="dice4" HorizontalAlignment="Stretch" Height="50" RadiusY="7.667" RadiusX="7.667" Stroke="Black" StrokeThickness="0" VerticalAlignment="Stretch" Width="50" RenderTransformOrigin="-1.073,-0.98" Canvas.Left="218" Canvas.Top="38" MouseUp="dice4_MouseUp" Cursor="Hand" Visibility="Hidden">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/dice0.png" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="dice5" HorizontalAlignment="Stretch" Height="50" RadiusY="7.667" RadiusX="7.667" Stroke="Black" StrokeThickness="0" VerticalAlignment="Stretch" Width="50" RenderTransformOrigin="-1.073,-0.98" Canvas.Left="290" Canvas.Top="38" MouseUp="dice5_MouseUp" Cursor="Hand" Visibility="Hidden">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/dice0.png" />
+                </Rectangle.Fill>
+            </Rectangle>
+        </Canvas>
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="206,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="227" Height="35" FontFamily="Showcard Gothic" TextAlignment="Center" Foreground="Bisque" Cursor="IBeam" Background="{x:Null}" MouseUp="textBlock_MouseUp" Text="Enter your name" Grid.Column="1"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="206,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="227" Height="35" FontFamily="Showcard Gothic" TextAlignment="Center" Foreground="Bisque" Cursor="IBeam" Background="{x:Null}" KeyDown="textBox_KeyDown" Grid.Column="1" Visibility="Hidden"/>
+        <TextBlock x:Name="turn" Grid.Column="1" HorizontalAlignment="Left" Margin="206,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontSize="18" Width="221" Height="44" FontFamily="Showcard Gothic" TextAlignment="Center" Foreground="Bisque" Background="{x:Null}" Visibility="Hidden"/>
+        <TextBlock x:Name="counter" Grid.Column="1" HorizontalAlignment="Left" Margin="300,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Showcard Gothic" TextAlignment="Center" Foreground="#FFEB5555" Background="{x:Null}" FontSize="24" Width="37"/>
+    </Grid>
+</Window>
