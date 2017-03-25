@@ -1,3 +1,3 @@
 # Projects
 This is my projects.
-#### Languages [C, C#, C++, Java, MySQL]
+#### Technologies [C, C++, C#, Java, JavaScript, HTML5, CSS, MySQL]
